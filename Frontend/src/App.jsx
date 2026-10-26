@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-    LMS
+    LMS Trupti
     </div>
   )
 }
