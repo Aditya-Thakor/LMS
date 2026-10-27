@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-export default function AuthForm({title, subtitle, fields, buttonText, footerText, linkText,linkTo, onSubmit}) {
+export default function Input({title, subtitle, fields, buttonText, footerText, linkText,linkTo, onSubmit}) {
     return (
+      <main className="flex min-h-screen items-center justify-center bg-gray-100 px-4 py-8">
         <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-2xl">
-        <h2 className="text- center text-2xl font-bold text-gray-900">{title}</h2>
+        <h2 className="text-center text-2xl font-bold text-gray-900">{title}</h2>
        <p className="mt-2 text-center text-sm text-gray-500">{subtitle}</p>
       
       <button type="button" className="mt-6 w-full rounded-lg border border-gray-200 py-3 text-sm hover:bg-gray-50">
@@ -43,5 +44,6 @@ export default function AuthForm({title, subtitle, fields, buttonText, footerTex
           </Link>
         </p>
       </div>
+      </main>
     );
 }
