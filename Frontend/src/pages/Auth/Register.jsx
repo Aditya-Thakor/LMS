@@ -1,5 +1,5 @@
 
-import AuthForm from "../../components/AuthForm";
+import Input from "../../components/Input";
 
 const fields = [
   {
@@ -42,7 +42,7 @@ export default function Register() {
   };
 
   return (
-    <AuthForm
+    <Input
       title="Create your account"
       subtitle="Welcome! Fill in your details to get started."
       fields={fields}
