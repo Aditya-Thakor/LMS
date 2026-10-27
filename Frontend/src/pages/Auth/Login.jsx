@@ -5,7 +5,7 @@ export default function Login() {
 
   return (
     <div>
-      <Input
+    <Input
         label={"email"}
         type={"email"}
         name={"email"}
