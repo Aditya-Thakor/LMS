@@ -1,18 +1,41 @@
+
 import Input from "../../components/Input";
 
+const fields = [
+  {
+    name: "email",
+    label: "Email address",
+    type: "email",
+    placeholder: "Enter your email address",
+    autoComplete: "email",
+  },
+  {
+    name: "password",
+    label: "Password",
+    type: "password",
+    placeholder: "Enter your password",
+    autoComplete: "current-password",
+  },
+];
+
 export default function Login() {
-  //email,password;
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.currentTarget));
+    console.log("Login:", data);
+    alert("Login form submitted!");
+  };
 
   return (
-    <div>
     <Input
-        label={"email"}
-        type={"email"}
-        name={"email"}
-        value={""}
-        onChange={() => {}}
-        placeholder='enter your email'
-      />
-    </div>
+      title="Sign in to LMS"
+      subtitle="Welcome back! Please sign in to continue."
+      fields={fields}
+      buttonText="Continue"
+      footerText="Don't have an account?"
+      linkText="Sign up"
+      linkTo="/register"
+      onSubmit={handleLogin}
+    />
   );
 }
