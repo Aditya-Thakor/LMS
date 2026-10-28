@@ -7,6 +7,12 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     react(),
+    tailwindcss(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+   resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
+  },
 })
