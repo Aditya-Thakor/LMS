@@ -2,17 +2,17 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import babel from '@rolldown/plugin-babel'
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
-// https://vite.dev/config/
+import { fileURLToPath } from 'node:url'
+
 export default defineConfig({
   plugins: [
     tailwindcss(),
     react(),
-    tailwindcss(),
     babel({ presets: [reactCompilerPreset()] })
   ],
-   resolve: {
+  resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
 })
