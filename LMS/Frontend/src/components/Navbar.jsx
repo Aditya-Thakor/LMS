@@ -1,5 +1,6 @@
 import { useAuth } from "../context/AuthContext";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   const { query, setQuery, submitSearch, user, logout } = useAuth();
 
@@ -71,8 +72,8 @@ export default function Navbar() {
                 Log in
               </Link>
               <Link
-                to="/signup"
-                className={`rounded-[5px] bg-[#a435f0] px-3 py-1.5 font-medium text-white hover:bg-[#8a22d4] sm:px-5 sm:py-[7px] `}
+                to="/register"
+                className="rounded-[5px] bg-[#a435f0] px-3 py-1.5 font-medium text-white hover:bg-[#8a22d4] sm:px-5 sm:py-[7px]"
               >
                 Sign up free
               </Link>
