@@ -1,12 +1,8 @@
-
+import Home from "./pages/Home";
 function App() {
   
-
-  return (
-    <div>
-    LMS Trupti
-    </div>
-  )
+  return <Home />;
+  
 }
 
 export default App

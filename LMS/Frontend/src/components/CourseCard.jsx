@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 export default function CourseCard({ course }) {
   return (
     <div className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
@@ -23,7 +23,7 @@ export default function CourseCard({ course }) {
           </span>
 
           <span className="flex items-center gap-1 text-yellow-500 text-sm font-semibold">
-            <i class="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star" />
             {course.rating}
           </span>
         </div>
@@ -38,10 +38,10 @@ export default function CourseCard({ course }) {
 
         <div className="flex gap-4 text-xs text-gray-500 mb-5">
           <span className="flex items-center gap-1">
-            <i class="fa-solid fa-clock"></i>{course.duration}
+            <i className="fa-solid fa-clock" />{course.duration}
           </span>
           <span className="flex items-center gap-1">
-         <i class="fa-solid fa-users"></i>{course.students}
+         <i className="fa-solid fa-users" />{course.students}
           </span>
         </div>
 
@@ -50,9 +50,11 @@ export default function CourseCard({ course }) {
             ₹{course.price}
           </span>
 
-          <button className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-indigo-700">
-            View Course <i class="fa-solid fa-arrow-right"></i>
-          </button>
+        
+            <Link to={`/course/${course.id}`} className="bg-indigo-600 text-white px-4 py-2 rounded-lg">
+              View Course <i className="fa-solid fa-arrow-right"/>
+            </Link>
+         
         </div>
 
       </div>

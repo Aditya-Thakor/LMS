@@ -1,7 +1,6 @@
-
 import { useState } from "react";
-import CourseCard from "../components/CourseCard";
-import { courses } from "../data/courses";
+import CourseCard from "@/components/CourseCard";
+import { courses } from "@/data/courses";
 
 export default function Courses() {
   const [search, setSearch] = useState("");
