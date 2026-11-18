@@ -1,4 +1,7 @@
-export const fields = [
+
+import Input from "../../components/Input";
+
+const fields = [
   {
     name: "firstName",
     label: "First name",
@@ -29,3 +32,25 @@ export const fields = [
     autoComplete: "new-password",
   },
 ];
+
+export default function Register() {
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.currentTarget));
+    console.log("Register:", data);
+    alert("Registration form submitted!");
+  };
+
+  return (
+    <Input
+      title="Create your account"
+      subtitle="Welcome! Fill in your details to get started."
+      fields={fields}
+      buttonText="Create Account"
+      footerText="Already have an account?"
+      linkText="Sign in"
+      linkTo="/login"
+      onSubmit={handleRegister}
+    />
+  );
+}
