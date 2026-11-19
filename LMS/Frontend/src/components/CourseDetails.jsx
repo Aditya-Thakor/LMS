@@ -60,11 +60,11 @@ function CourseDetails() {
             <div className="p-6">
               <div className="flex items-center gap-3">
                 <h2 className="text-3xl font-bold text-indigo-600">
-                  ₹{course.price}
+                  <i className="fa-solid fa-indian-rupee-sign" />{course.price}
                 </h2>
 
                 <span className="text-gray-400 line-through">
-                  ₹{course.oldPrice}
+                  <i className="fa-solid fa-indian-rupee-sign" />{course.oldPrice}
                 </span>
               </div>
 
@@ -94,7 +94,7 @@ function CourseDetails() {
             <div className="grid sm:grid-cols-2 gap-5 mt-7">
               {course.whatYouWillLearn.map((item) => (
                 <p key={item} className="flex gap-3 text-gray-600">
-                  <CheckCircle className="text-green-500 shrink-0" size={20}/>
+                  <i className="fa-solid fa-circle-check text-indigo-600 mt-1" />
                   {item}
                 </p>
               ))}
@@ -113,7 +113,7 @@ function CourseDetails() {
 
             <div className="mt-6 space-y-4">
               {course.curriculum.map((section, index) => (
-                <details key={section.title} className="border rounded-lg p-5">
+                <div key={section.title} className="border rounded-lg p-5">
                   <summary className="font-semibold cursor-pointer">
                     {index + 1}. {section.title}
                   </summary>
@@ -121,19 +121,19 @@ function CourseDetails() {
                   <div className="mt-4 space-y-3">
                     {section.lessons.map((lesson) => (
                       <p key={lesson} className="text-gray-500 text-sm">
-                        <BookOpen size={16} className="inline mr-2"/>
-                        {lesson}
+                        <i className="fa-solid fa-circle-dot" /> {lesson}
+                     
                       </p>
                     ))}
                   </div>
-                </details>
+                </div>
               ))}
             </div>
           </div>
 
         </div>
 
-        <aside className="bg-white rounded-xl border p-6 h-fit">
+        <aside className="bg-white rounded-xl border border-gray-500 p-6 h-fit">
           <h3 className="font-bold text-xl">Course Information</h3>
 
           <div className="space-y-5 mt-6 text-gray-600">
@@ -146,9 +146,8 @@ function CourseDetails() {
 
           <Link
             to="/courses"
-            className="block text-center text-indigo-600 mt-8 font-semibold"
-          >
-            ← Browse More Courses
+            className="block text-center text-indigo-600 mt-8 font-semibold">
+            <i className="fa-solid fa-arrow-left" /> Browse More Courses
           </Link>
         </aside>
 
