@@ -32,7 +32,7 @@ function WhyChooseUs() {
         {features.map((item) => (
           <div
             key={item.title}
-            className="p-8 border rounded-2xl text-center hover:shadow-xl transition"
+            className="p-8 border border-gray-500 rounded-2xl text-center hover:shadow-xl transition"
           >
 
             {/* Font Awesome Icon */}

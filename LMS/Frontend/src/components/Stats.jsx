@@ -8,7 +8,7 @@ const stats = [
 
 function Stats() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-12">
+    <section className="w-full mx-auto bg-gray-900 px-6 py-12">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {stats.map((item) => (
           <div key={item.label} className="text-center p-6 bg-white rounded-xl shadow-sm">

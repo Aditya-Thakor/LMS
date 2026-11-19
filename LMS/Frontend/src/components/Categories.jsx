@@ -19,12 +19,12 @@ function Categories() {
         {categories.map((item) => (
           <div
             key={item.name}
-            className="p-6 border rounded-2xl hover:shadow-lg transition"
+            className="p-6 border border-gray-500 rounded-2xl hover:shadow-lg transition"
           >
             <div className="bg-indigo-50 text-indigo-600 p-4 rounded-xl w-fit">
 
-              {/* Correct Font Awesome Icon */}
-              <i className={`${item.icon} text-2xl`}></i>
+          
+              <i className={`${item.icon} text-2xl  `}></i>
 
             </div>
 
