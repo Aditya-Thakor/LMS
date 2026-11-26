@@ -1,13 +1,11 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "../context/AuthContext";
 import Login from "../pages/Auth/Login";
 import Register from "../pages/Auth/Register";
-import Navbar from "../components/Navbar";
-import Courses from "@/pages/Auth/Courses";
+import Courses from "@/pages/Courses";
 import Home from "@/pages/Home";
-import Footer from "@/components/Footer";
-import CourseDetails from "@/components/CourseDetails";
-
+import {Navbar,Footer,CourseDetails} from "@/components/components";
+import Admin from "@/dashbords/Admin";
 export default function AppRoutes() {
   return (
     <BrowserRouter>
@@ -19,6 +17,7 @@ export default function AppRoutes() {
           <Route path="/register" element={<Register />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/course/:id" element={<CourseDetails />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
         <Footer />
       </AuthProvider>

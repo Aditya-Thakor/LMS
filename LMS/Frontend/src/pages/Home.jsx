@@ -1,11 +1,5 @@
-import Categories from "@/components/Categories";
-import CourseSection from "@/components/CourseSection";
-import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
-import WhyChooseUs from "@/components/WhyChoseUs";
 
-
-
+import { Hero,Stats,Categories,CourseSection,WhyChooseUs } from "@/components/components";
 function Home() {
   return (
     <>
